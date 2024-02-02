@@ -6,6 +6,7 @@ import ProductDisplay from './components/ProductDisplay';
 import Modal from './components/Modal';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import Recommended from './components/Recommended';
 import './App.css';
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
                 path="/" 
                 element={
                   <>
+                    <Recommended />
                     <ProductDisplay addToCart={addToCart} />
                     {showModal && <Modal closeModal={closeModal} />}
                   </>

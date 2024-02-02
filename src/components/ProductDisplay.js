@@ -4,10 +4,10 @@ import './ProductDisplay.css';
 
 const ProductDisplay = ({ addToCart }) => {
   const products = [
-    { id: 1, name: 'Hoodie', price: 25, imageUrl: 'hoodie.png' },
-    { id: 2, name: 'T-Shirt', price: 15, imageUrl: 'tee.png' },
-    { id: 3, name: 'Cup', price: 10, imageUrl: 'cup.png' },
-    { id: 4, name: 'Pin', price: 8, imageUrl: 'pin.png' }
+    { id: 1, name: 'Hoodie', price: 25, imageUrl: 'hoodie.png' , details: 'This is a hoodie. It is very comfortable and warm.'},
+    { id: 2, name: 'T-Shirt', price: 15, imageUrl: 'tee.png' , details: 'This is a t-shirt. It is very comfortable and cool.'},
+    { id: 3, name: 'Cup', price: 10, imageUrl: 'cup.png' , details: 'This is a cup. It is very useful and practical.'},
+    { id: 4, name: 'Pin', price: 8, imageUrl: 'pin.png' , details: 'This is a pin. It is very fashionable and stylish.'},
   ];
 
   const [productList, setProductList] = useState(products);
