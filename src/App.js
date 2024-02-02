@@ -35,6 +35,7 @@ function App() {
 
   const clearCart = () => {
     setCartItems([]);
+    localStorage.removeItem('productList');
   };
 
     const closeModal = () => setShowModal(false);
