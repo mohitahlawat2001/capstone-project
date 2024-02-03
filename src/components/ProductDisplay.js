@@ -23,7 +23,7 @@ const ProductDisplay = ({ addToCart }) => {
       setProductList(updatedProducts);
     }
 
-  } , [products]);
+  });
 
   const handleAddToCart = (product) => {
     addToCart(product);
