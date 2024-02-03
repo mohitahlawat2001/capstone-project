@@ -13,7 +13,7 @@ const Checkout = ( {clearCart} ) => {
     firstName: profile?.givenName || '',
     lastName: profile?.familyName || '', 
     email: profile?.email || '',
-    phone: profile?.phoneNumber || '', 
+    // phone: profile?.phoneNumber || '', 
     address: profile?.streetAddress || '', 
     postalCode: profile?.postalCode || '',
     city: profile?.locality || '', 
@@ -69,7 +69,7 @@ const Checkout = ( {clearCart} ) => {
                 required 
               />
     
-              <label htmlFor="phone">Phone Number</label>
+              {/* <label htmlFor="phone">Phone Number</label>
               <input 
                 type="text" 
                 name="phone" 
@@ -77,7 +77,7 @@ const Checkout = ( {clearCart} ) => {
                 value={userData.phone} 
                 onChange={handleChange} 
                 required 
-              />
+              /> */}
     
               <label htmlFor="address">Address</label>
               <input 

@@ -13,22 +13,27 @@ const ProductDisplay = ({ addToCart }) => {
   const [productList, setProductList] = useState(products);
 
   useEffect(() => {
-    const storedProductList = JSON.parse(localStorage.getItem('productList'));
-    if (storedProductList) {
-      setProductList(storedProductList);
+    const savedCart = JSON.parse(sessionStorage.getItem('cart'));
+    
+    if (savedCart) {
+      const updatedProducts = products.map((product) => {
+        const savedItem = savedCart.find((item) => item.id === product.id);
+        return { ...product, count: savedItem ? savedItem.quantity : 0 };
+      });
+      setProductList(updatedProducts);
     }
-  }, []);
+
+  } , [products]);
 
   const handleAddToCart = (product) => {
-    const updatedProductList = productList.map((p) => {
-      if (p.id === product.id) {
-        return { ...p, count: p.count + 1 };
-      }
-      return p;
-    });
-    setProductList(updatedProductList);
     addToCart(product);
-    localStorage.setItem('productList', JSON.stringify(updatedProductList));
+    const updatedProducts = productList.map((item) => {
+      if (item.id === product.id) {
+        return { ...item, count: item.count + 1 };
+      }
+      return item;
+    });
+    setProductList(updatedProducts);
   };
 
   return (

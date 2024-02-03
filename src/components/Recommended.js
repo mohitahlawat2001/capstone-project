@@ -33,12 +33,32 @@ const Recommended = () => {
         fetchLocation();
     }, []);
 
+    const recommendation = () => {
+        if (weather) {
+            const temp = weather.main.temp - 273.15; // Convert temperature from Kelvin to Celsius
+            console.log(weather.weather[0].main);
+            const currentWeather = weather.weather[0].main;
+            if (currentWeather === "Clear") {
+                return "It's a sunny day! you should buy sunscreen and sunglasses. ";
+            } else if (currentWeather === "Clouds" || currentWeather === "Mist" || currentWeather === "Fog"|| currentWeather === "Haze" || currentWeather === "Smoke" || currentWeather === "Dust" || currentWeather === "Sand" || currentWeather === "Ash" || currentWeather === "Squall" || currentWeather === "Tornado") {
+                return `It's a ${currentWeather } day! you should buy a stackup pin and drink a hot coffee.`;
+            } else if (currentWeather === "Rain" || currentWeather === "Drizzle" || currentWeather === "Thunderstorm") {
+                return `It's a ${currentWeather} day! you should buy an umbrella and a raincoat.`;
+            } else if (currentWeather === "Snow") {
+                return "It's a snowy day! you should buy a hoodie.";
+            } else {
+                return "It's a normal day! you should buy a t-shirt.";
+            }
+        }
+    };
+    
     return (
-        <div className="Recommended">
-            <h2>Recommended for you</h2>
+        <div className="Recommended banner">
+            <h2>Recommended for stackies by a stackies</h2>
             {weather && (
                 <div>
-                    <h3>Weather in {weather.name}</h3>
+                    {/* <h3>Weather in {weather.name}</h3> */}
+                    <p>{recommendation()}</p>
                 </div>
             )}
         </div>
