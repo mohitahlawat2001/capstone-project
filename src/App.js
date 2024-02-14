@@ -5,8 +5,10 @@ import Header from './components/Header';
 import Footer from './components/Footers';
 import ProductDisplay from './components/ProductDisplay';
 import Modal from './components/Modal';
+
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import Products from './components/Products';
 import Recommended from './components/Recommended';
 import './App.css';
 
@@ -57,7 +59,8 @@ function App() {
                 } 
               />
               <Route path="/cart" element={<Cart cartItems={cartItems} />} />
-              <Route path="/checkout" element={<Checkout clearCart={clearCart}/>} />
+              <Route path="/checkout" element={<Checkout clearCart={clearCart} />} />
+              <Route path="/products" element={<Products addToCart={addToCart} />} />
             </Routes>
           </div>
         </Router>
