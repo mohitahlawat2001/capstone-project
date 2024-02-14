@@ -35,7 +35,7 @@ const Recommended = () => {
 
     const recommendation = () => {
         if (weather) {
-            const temp = weather.main.temp - 273.15; // Convert temperature from Kelvin to Celsius
+            // const temp = weather.main.temp - 273.15; // Convert temperature from Kelvin to Celsius
             console.log(weather.weather[0].main);
             const currentWeather = weather.weather[0].main;
             if (currentWeather === "Clear") {

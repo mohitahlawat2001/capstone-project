@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import UserContext from './contexts/UserContext';
 import Header from './components/Header';
+import Footer from './components/Footers';
 import ProductDisplay from './components/ProductDisplay';
 import Modal from './components/Modal';
 import Cart from './components/Cart';
@@ -60,6 +61,7 @@ function App() {
             </Routes>
           </div>
         </Router>
+        <Footer />
         </UserContext.Provider>
       );
     }
