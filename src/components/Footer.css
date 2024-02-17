@@ -1,177 +1,101 @@
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding: 30px 0;
-  }
-  
-  .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-  }
-  
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .footer-links a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .footer-form {
-    width: 50%;
-  }
-  
-  .footer-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .footer-form label {
-    color: #fff;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .footer-form input,
-  .footer-form textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  .footer-form input:focus,
-  .footer-form textarea:focus {
-    border-color: #007bff;
-  }
-  
-  .footer-form input[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .footer-form input[type="submit"]:hover {
-    background-color: #0069d9;
-  }
-  
-  .error-message,
-  .success-message {
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
-  .error-message {
-    background-color: #f8d7da;
-    color: #721c24;
-  }
-  
-  .success-message {
-    background-color: #dff0d8;
-    color: #3c763d;
-  }
-  
-  /* Accessibility improvements */
-  
-  .footer input[type="email"] {
-    aria-invalid: polite;
-  }
-  
-  .footer input[type="email"]:invalid {
-    border-color: red;
-  }
-  
-  #email-help {
-    display: none; /* Visually hide by default */
-  }
-  
-  .footer input[type="email"]:invalid + #email-help {
-    display: block; /* Reveal on validation error */
-    color: red;
-    font-style: italic;
-  }
-  
-  .footer-links {
-    margin-top: 20px;
-  }
+  background-color: #222;
+  padding: 20px 0;
+}
 
-  .footer-links h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  padding: 0 20px;
+}
 
-  .footer-links li {
-    margin-bottom: 5px;
-  }
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-  .footer-links a {
-    color: #fff;
-    text-decoration: none;
-  }
+.footer-links h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
 
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-    
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
 
-  .flex-container {
-    display: flex;
-    justify-content: space-between;
+.footer-links li {
+  margin-bottom: 10px;
+}
 
-  }
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
 
-  .flex-container > div {
-    /* background-color: #f1f1f1; */
-    margin: auto 100px auto 100px;
-    padding: 20px 20px;
-  }
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 
+.footer-form form {
+  display: flex;
+  flex-direction: column;
+  width: 120%;
+}
 
-  .flex-left {
-    flex: 1;
-    justify-content: space-between;
-  }
+.footer-form h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
 
-  .flex-right {
-    flex: 3;
-    justify-content: space-between;
-  }
+.footer-form label {
+  color: #fff;
+  margin-bottom: 5px;
+}
 
-  .footer-copyright {
-    background-color: #f8f9fa;
-    text-align: center;
-    padding: 20px 0 20px 0;
-    position: relative;
-    left: 0;
-    bottom: -30px;
-    width: 100%;
-  }
-  
-  .footer-copyright p {
-    margin: 0;
-    padding: 0;
-    color: #6c757d;
-  }
+.footer-form input,
+.footer-form textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  background-color: transparent;
+}
+
+.footer-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #222;
+  cursor: pointer;
+}
+
+.footer-form .error-message,
+.footer-form .success-message {
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.footer-copyright {
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.footer-copyright p {
+  margin: 0;
+}

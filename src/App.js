@@ -9,6 +9,7 @@ import Modal from './components/Modal';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import Products from './components/Products';
+import About from './components/About';
 import Recommended from './components/Recommended';
 import './App.css';
 
@@ -61,6 +62,7 @@ function App() {
               <Route path="/cart" element={<Cart cartItems={cartItems} />} />
               <Route path="/checkout" element={<Checkout clearCart={clearCart} />} />
               <Route path="/products" element={<Products addToCart={addToCart} />} />
+              <Route path="/About" element={<About />} />
             </Routes>
           </div>
         </Router>

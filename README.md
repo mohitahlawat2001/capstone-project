@@ -26,6 +26,8 @@ The Online Store is a capstone project developed by Affinidi. It aims to provide
     coded in Recommended.css
 - added footer for quick links and form for taking feedback
     coded in Footer.js , Footer.css
+- added product page which show different product fetched from dummy api
+- added about page which show information about site
 
 ## Description
 
